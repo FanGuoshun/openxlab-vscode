@@ -8,6 +8,7 @@ echo "**** install openvscode-server runtime dependencies ****" &&
       sed 's|^openvscode-server-v||')
   fi &&
   mkdir -p ~/vscode/app/openvscode-server &&
+  mkdir -p ~/vscode/tmp &&
   curl -o \
     ~/vscode/tmp/openvscode-server.tar.gz -L \
     "https://github.com/gitpod-io/openvscode-server/releases/download/openvscode-server-v${CODE_RELEASE}/openvscode-server-v${CODE_RELEASE}-linux-x64.tar.gz" &&
@@ -15,11 +16,9 @@ echo "**** install openvscode-server runtime dependencies ****" &&
     ~/vscode/tmp/openvscode-server.tar.gz -C \
     ~/vscode/app/openvscode-server/ --strip-components=1 &&
   echo "**** clean up ****" &&
-  apt-get clean &&
+#  apt-get clean &&
   rm -rf \
-    ~/vscode/tmp/* \
-    /var/lib/apt/lists/* \
-    /var/tmp/*
+    ~/vscode/tmp/*
 
 echo "Starting VSCode Server..."
 
