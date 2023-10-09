@@ -1,13 +1,6 @@
 #!/bin/bash
 
 echo "**** install openvscode-server runtime dependencies ****" &&
-  apt-get update &&
-  apt-get install -y \
-    jq \
-    libatomic1 \
-    nano \
-    net-tools \
-    netcat &&
   echo "**** install openvscode-server ****" &&
   if [ -z ${CODE_RELEASE+x} ]; then
     CODE_RELEASE=$(curl -sX GET "https://api.github.com/repos/gitpod-io/openvscode-server/releases/latest" |

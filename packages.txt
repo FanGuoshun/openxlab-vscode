@@ -1,0 +1,5 @@
+jq
+libatomic1
+nano
+net-tools
+netcat
