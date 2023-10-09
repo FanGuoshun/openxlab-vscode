@@ -22,4 +22,4 @@ echo "**** install openvscode-server runtime dependencies ****" &&
 
 echo "Starting VSCode Server..."
 
-exec ~/vscode/app/openvscode-server/bin/openvscode-server --host 0.0.0.0 --port 7860 --auth password
+exec ~/vscode/app/openvscode-server/bin/openvscode-server --host 0.0.0.0 --port 7860 --auth password --without-connection-token \"${@}\" --
