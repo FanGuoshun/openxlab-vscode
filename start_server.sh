@@ -16,4 +16,4 @@ echo "**** install code-server ****" &&
 
 echo "Starting VSCode Server..."
 
-exec ~/vscode/app/code-server/bin/code-server --host 0.0.0.0 --port 7860 --without-connection-token \"${@}\" --
+exec ~/vscode/app/code-server/bin/code-server --host 0.0.0.0 --port 7860 --auth password
