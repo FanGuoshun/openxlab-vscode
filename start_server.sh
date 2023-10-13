@@ -10,10 +10,9 @@ echo "**** install code-server ****" &&
     ~/vscode/tmp/code-server.tar.gz -C \
     ~/vscode/app/code-server/ --strip-components=1 &&
   echo "**** clean up ****" &&
-  #  apt-get clean &&
   rm -rf \
     ~/vscode/tmp/*
 
 echo "Starting VSCode Server..."
 
-exec ~/vscode/app/code-server/bin/code-server --host 0.0.0.0 --port 7860 --auth password
+exec ~/vscode/app/code-server/bin/code-server --host 0.0.0.0 --port 7860
